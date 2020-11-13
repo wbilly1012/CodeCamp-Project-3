@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Lightning Guitars</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@600&display=swap"
+        rel="stylesheet">
 
     <style>
+        * {
+            margin: 0;
+        }
         html {
             background-image: url(images/background.jpg);
             background-repeat: no-repeat;
@@ -14,97 +20,199 @@
         }
 
         img {
-            width: 100px;
+            width: 200px;
+            height: 300px;
+        }
+        #header-img {
+            width: 160px;
             height: auto;
+            padding-top: 30px;
+        }
+        
+        header {
+            margin-top: 0px;
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+        }
+        nav > ul {
+            display: inline;
+            padding: 0;
+        }
+        nav > div> ul > li {
+            display: inline-block;
+            padding: 0 20px 0 20px;
+            list-style: none;
+        }
+        main {
+            display: block;
+            padding-top: 3em;
+        }
+        
+        h1 {
+            margin: 0;
+            padding: 100px 0 0 0;
+            font-size: 13vw;
+            font-family: 'Big Shoulders Inline Text', cursive, sans-serif;
+        }
+        main {
+            margin: 20px;
+            padding: 20px;
+        }
+        section > div {
+            padding: 40px;
         }
 
-        #nav-bar {
-            background-color: black;
-            position: fixed;
-            margin-left: 0;
-            margin-top: 0;
+        h2 {
+            font-size: 4vw;
+        }
+        button {
+            margin-bottom: 10px;
+            padding: 15px 80px 15px 80px;
+            background-color: cyan;
+            font-style: italic;
+            font-size: 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+        }
+        button > a {
+            text-decoration: none;
+            color: black;
+        }
+
+        @media (min-height: 350px) { main { margin: 30px;
+ padding: 30px;}}
+
+        form {
+            padding: 10px;
+            font-size: 30px;
+        }
+        form > input {
+            background-color: cyan;
+            border-radius: 6px;
+            padding: 5px;
+        }
+        #features {
+            font-size: 30px;
+            color: cyan;
+            background-color: rgba(0,0,0,.4);
+        }
+        #playing {
+            color: cyan;
+            background-color: rgba(0,0,0,.4);
+        }
+        #pricing {
+            color: cyan;
+            background-color: rgba(0,0,0,.4);
+        }
+        .container {
+            display: flex;
+            width: 1000px;
+            height: 500px;
+        }
+        .box1 {
+            width: 33.3333333333%;
+            height: 33.3333333333%;
+        }
+        .box2 {
+            width: 33.3333333333%;
+            height: 33.3333333333%;
+        }
+        .box3 {
+            width: 33.3333333333%;
+            height: 33.3333333333%;
         }
     </style>
 </head>
 <body>
     <header id="header">
         <nav id="nav-bar">
-            <div><img id="header-img" src="images/Lightning Guitars Logo.png" alt="Lightning Guitars Logo">
+            <div>
                 <ul>
-                    <li><a class="nav-link" href="#features">Features</a></li>
-                    <li><a class="nav-link" href="#playing">Playing</a></li>
-                    <li><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li><img id="header-img" src="images/Lightning Guitars Logo.png" alt="Lightning Guitars Logo"></li>
+                    <li><button><a class="nav-link" href="#features">Features</a></button></li>
+                    <li><button><a class="nav-link" href="#playing">Playing</a></button></li>
+                    <li><button><a class="nav-link" href="#pricing">Pricing</a></button></li>
                 </ul>
             </div>
         </nav>
-    </header>
-    <main>
-        <h1>Lightning Guitars</h1>
+    </header><br/>
+    <main><br/>
+        <h1><strong>Lightning Guitars</strong></h1>
+        <section>
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <p><b>Enter your email address to get started!</b>
+                </p>
+                <label for="email"></label>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="submit" id="submit">
+            </form>
+        </section>
         <section>
             <div id="features">
-                <h2>Features</h2>
-                <p>Explain about all the features</p>
-                <ul>
-                    <li>Feature 1</li>
-                    <li>Feature 2</li>
-                    <li>Feature 3</li>
+                <h2>Features</h2><br/>
+                <p><b><i>Our guitars are made with top notch materials!</i></b></p><br/>
+                <ul><br/>
+                    <li>We ship anywhere in the world fast and free!</li><br/>
+                    <li>All of our guitars are hand crafted works of art!</li><br/>
+                    <li>We have a money back, no worries policy!!</li><br/>
                 </ul>
             </div>
             <div id="playing">
                 <h2>Playing</h2>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/MRqjOuhZsoY" 
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/MRqjOuhZsoY?autoplay=1" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
                 gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>Video of someone playing the guitar</p>
+                <p>Playing the guitar is awesome!</p>
             </div>
             <div id="pricing">
                 <h2>Pricing</h2>
-                <p>Explain about pricing</p>
-                <ul>
-                    <li>
+                <p>Here are the best guitars you will ever own!</p>
+                <ol class="container">
+                    <li class="box1">
                         <img src="images/acoustic.jpg" alt="acoustic guitar">
                         <h3>Acoustic</h3>
+                        <p>Price $12999.69</p>
                     </li>
-                    <li>
+                    <li class="box2">
                         <img src="images/electric.jpg" alt="electric guitar">
                         <h3>Electric</h3>
+                        <p>Price $10999.69</p>
                     </li>
-                    <li>
+                    <li class="box3">
                         <img src="images/bass.jpg" alt="bass guitar">
                         <h3>Bass</h3>
+                        <p>Price $11999.69</p>
                     </li>
-                </ul>
+                </ol>
             </div>
         </section>
     </main>
+    <footer>This project was practice for webdevelopment and is a fake page!</footer>
 </body>
 </html>
 <!--Guide
-xUser Story #1: My product landing page should have a header element with a corresponding id="header".
-
-xUser Story #2: I can see an image within the header element with a corresponding id="header-img". A company logo would make a good image here.
-
-xUser Story #3: Within the #header element I can see a nav element with a corresponding id="nav-bar".
-
-xUser Story #4: I can see at least three clickable elements inside the nav element, each with the class nav-link.
 
 xUser Story #5: When I click a .nav-link button in the nav element, I am taken to the corresponding section of the landing page.
 
-User Story #6: I can watch an embedded product video with id="video".
+xUser Story #6: I can watch an embedded product video with id="video".
 
-User Story #7: My landing page has a form element with a corresponding id="form".
+xUser Story #7: My landing page has a form element with a corresponding id="form".
 
-User Story #8: Within the form, there is an input field with id="email" where I can enter an email address.
+xUser Story #8: Within the form, there is an input field with id="email" where I can enter an email address.
 
-User Story #9: The #email input field should have placeholder text to let the user know what the field is for.
+xUser Story #9: The #email input field should have placeholder text to let the user know what the field is for.
 
-User Story #10: The #email input field uses HTML5 validation to confirm that the entered text is an email address.
+xUser Story #10: The #email input field uses HTML5 validation to confirm that the entered text is an email address.
 
-User Story #11: Within the form, there is a submit input with a corresponding id="submit".
+xUser Story #11: Within the form, there is a submit input with a corresponding id="submit".
 
-User Story #12: When I click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit).
+xUser Story #12: When I click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit).
 
-User Story #13: The navbar should always be at the top of the viewport.
+xUser Story #13: The navbar should always be at the top of the viewport.
 
 User Story #14: My product landing page should have at least one media query.
 
